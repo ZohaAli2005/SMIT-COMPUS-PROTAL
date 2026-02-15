@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lost & Found Report</title>
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #eef1f5;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .main-card {
+      max-width: 700px;
+      margin: 60px auto;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .card-header-custom {
+      background-color: #f8f9fa;
+      border-bottom: 1px solid #ddd;
+      font-weight: 600;
+      font-size: 18px;
+      padding: 15px 20px;
+      border-radius: 12px 12px 0 0;
+    }
+
+    .form-control, .form-select {
+      height: 45px;
+      border-radius: 6px;
+    }
+
+    textarea.form-control {
+      height: 100px;
+      resize: none;
+    }
+
+    .urgency-box {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 12px;
+      background-color: #f8f9fa;
+    }
+
+    .urgency-option {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 500;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .low { background-color: #28a745; }
+    .medium { background-color: #ffc107; }
+    .high { background-color: #dc3545; }
+
+    .submit-btn {
+      background-color: #3b82f6;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .submit-btn:hover {
+      background-color: #2563eb;
+    }
+
+    @media (max-width: 576px) {
+      .main-card {
+        margin: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+<section>
+<div class="container">
+  <div class="card main-card">
+    
+    <div class="card-header-custom">
+      📋 Lost & Found Report
+    </div>
+
+    <div class="card-body p-4">
+
+      <h5 class="mb-4 fw-semibold">Report Lost Item</h5>
+
+      <form>
+        <!-- Item Name -->
+        <div class="mb-3">
+          <label class="form-label">Item Name</label>
+          <input type="text" class="form-control">
+        </div>
+
+        <!-- Category Row -->
+        <div class="row mb-3">
+          <div class="col-md-6 mb-3 mb-md-0">
+            <label class="form-label">Category</label>
+            <select class="form-select">
+              <option selected>Metrus</option>
+              <option>Electronics</option>
+              <option>Wallet</option>
+            </select>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">&nbsp;</label>
+            <select class="form-select">
+              <option selected>Elisworce</option>
+              <option>Option 2</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Description -->
+        <div class="mb-3">
+          <label class="form-label">Description</label>
+          <textarea class="form-control"></textarea>
+        </div>
+
+        <!-- Location -->
+        <div class="mb-3">
+          <label class="form-label">Location</label>
+          <select class="form-select">
+            <option selected>Select Location</option>
+            <option>Office</option>
+            <option>Park</option>
+          </select>
+        </div>
+
+        <!-- Urgency -->
+        <div class="mb-4">
+          <label class="form-label">Urgency</label>
+          <div class="urgency-box d-flex justify-content-between flex-wrap">
+            
+            <div class="form-check urgency-option">
+              <input class="form-check-input me-2" type="radio" name="urgency">
+              <span class="dot low"></span> Low
+            </div>
+
+            <div class="form-check urgency-option">
+              <input class="form-check-input me-2" type="radio" name="urgency">
+              <span class="dot medium"></span> Medium
+            </div>
+
+            <div class="form-check urgency-option">
+              <input class="form-check-input me-2" type="radio" name="urgency">
+              <span class="dot high"></span> High
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Button -->
+        <div class="text-center">
+          <a href="student.html"><button type="submit" class="btn submit-btn text-white">
+            Submit Complaint
+          </button></a>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</div>
+</section>
+</body>
+</html>
+

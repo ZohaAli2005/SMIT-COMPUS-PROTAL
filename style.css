@@ -1,0 +1,116 @@
+body {
+    background: #f5f6f8;
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.main-wrapper {
+    width: 100%;
+    max-width: 900px;
+}
+
+.login-card {
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* LEFT SECTION */
+.left-section {
+    background: #eef7f2;
+    padding: 40px;
+    position: relative;
+}
+
+.brand {
+    color: #2bb673;
+    font-weight: 600;
+}
+
+.left-section h2 {
+    margin-top: 40px;
+    font-weight: 600;
+}
+
+.left-section p {
+    color: #555;
+    font-size: 14px;
+}
+
+/* Decorative circles */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: #2bb673;
+    opacity: 0.2;
+}
+
+.circle1 {
+    width: 200px;
+    height: 200px;
+    bottom: -60px;
+    left: -60px;
+}
+
+.circle2 {
+    width: 150px;
+    height: 150px;
+    bottom: -40px;
+    left: 80px;
+}
+
+/* RIGHT SECTION */
+.right-section {
+    padding: 40px;
+}
+
+.form-control {
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.btn-primary {
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.role-btn {
+    font-size: 13px;
+    padding: 5px 14px;
+}
+
+.google-btn {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    padding: 8px;
+    font-size: 14px;
+}
+
+/* RESPONSIVE FIXES */
+@media (max-width: 992px) {
+    .left-section {
+        text-align: center;
+    }
+
+    .circle1,
+    .circle2 {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .left-section,
+    .right-section {
+        padding: 25px;
+    }
+
+    .left-section h2 {
+        margin-top: 20px;
+    }
+}

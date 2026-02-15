@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit Complaint</title>
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #eef2f6;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .main-card {
+      max-width: 900px;
+      margin: 60px auto;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+
+    .card-header-custom {
+      background: #f8f9fa;
+      padding: 15px 20px;
+      font-weight: 600;
+      font-size: 18px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+
+    .hero-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+    }
+
+    .hero-content h3 {
+      font-weight: 600;
+    }
+
+    .hero-content p {
+      margin-bottom: 10px;
+    }
+
+    .hero-content .badge-location {
+      background: #ffffff;
+      color: #333;
+      padding: 6px 15px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    /* Event Cards */
+    .event-card {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .event-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .event-card img {
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .register-btn {
+      background-color: #28a745;
+      border: none;
+      padding: 6px 18px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .register-btn:hover {
+      background-color: #218838;
+    }
+
+    @media (max-width: 576px) {
+      .main-card {
+        margin: 20px;
+      }
+
+      .hero img {
+        height: 200px;
+      }
+    }
+
+      body {
+      background: #eef2f6;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .main-card {
+      max-width: 750px;
+      margin: 60px auto;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    .card-header-custom {
+      background: #f8f9fa;
+      padding: 15px 20px;
+      font-weight: 600;
+      font-size: 18px;
+      border-bottom: 1px solid #ddd;
+      border-radius: 12px 12px 0 0;
+    }
+
+    .form-control, .form-select {
+      height: 45px;
+      border-radius: 6px;
+    }
+
+    textarea.form-control {
+      height: 90px;
+      resize: none;
+    }
+
+    .urgency-box {
+      background: #f8f9fa;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 12px 15px;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 6px;
+    }
+
+    .low { background: #28a745; }
+    .medium { background: #ffc107; }
+    .high { background: #dc3545; }
+
+    .submit-btn {
+      background: #3b82f6;
+      border: none;
+      padding: 12px 35px;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .submit-btn:hover {
+      background: #2563eb;
+    }
+
+    .table-card {
+      max-width: 900px;
+      margin: 30px auto 60px auto;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    .status-badge {
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .pending {
+      background: #fff3cd;
+      color: #856404;
+    }
+
+    .resolved {
+      background: #d4edda;
+      color: #155724;
+    }
+
+    @media(max-width:576px){
+      .main-card,
+      .table-card{
+        margin:20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<section>
+<div class="container">
+  <div class="card main-card">
+    <!-- Header -->
+    <div class="card-header-custom">
+      🗂 Submit Complaint
+    </div>
+
+    <div class="card-body">
+
+      <!-- Hero Section -->
+      <div class="hero mb-4">
+        <img src="./images/parkimage.jpg" alt="Community Cleanup">
+        <div class="hero-content">
+          <h3>Community Cleanup</h3>
+          <p>Saturday, 24th June</p>
+          <span class="badge-location">City Park</span>
+        </div>
+      </div>
+
+      <!-- Event Cards -->
+      <div class="row g-4">
+
+        <!-- Card 1 -->
+        <div class="col-md-6">
+          <div class="card event-card">
+            <img src="./images/techimages.jpg" class="card-img-top" alt="parkimage">
+            <div class="card-body d-flex justify-content-between align-items-center">
+              <div>
+                <h6 class="mb-1">Tech Workshop</h6>
+                <small class="text-muted">June 5</small>
+              </div>
+              <button class="btn register-btn text-white">Register</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-6">
+          <div class="card event-card">
+            <img src="./images/healthcampimage.jpg" class="card-img-top" alt="techimages">
+            <div class="card-body d-flex justify-content-between align-items-center">
+              <div>
+                <h6 class="mb-1">Health Camp</h6>
+                <small class="text-muted">July 5</small>
+              </div>
+              <button class="btn register-btn text-white">Register</button>
+            </div>
+          </div>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>
+</section>
+<section>
+<div class="container">
+  <!-- Submit Complaint Card -->
+  <div class="card main-card">
+    <div class="card-header-custom">
+      📝 Submit Complaint
+    </div>
+    <div class="card-body p-4">
+      <form>
+
+        <!-- Complaint Title -->
+        <div class="mb-3">
+          <label class="form-label">Complaint Title</label>
+          <input type="text" class="form-control">
+        </div>
+
+        <!-- Category -->
+        <div class="mb-3">
+          <label class="form-label">Category</label>
+          <select class="form-select">
+            <option selected>Packages</option>
+            <option>Maintenance</option>
+            <option>Cleaning</option>
+          </select>
+        </div>
+
+        <!-- Description -->
+        <div class="mb-3">
+          <label class="form-label">Description</label>
+          <textarea class="form-control"></textarea>
+        </div>
+
+        <!-- Location -->
+        <div class="mb-3">
+          <label class="form-label">Location</label>
+          <select class="form-select">
+            <option selected>Select Location</option>
+            <option>1st Floor</option>
+            <option>Parking Area</option>
+          </select>
+        </div>
+
+        <!-- Urgency -->
+        <div class="mb-4">
+          <label class="form-label">📅 Urgency</label>
+          <div class="urgency-box d-flex gap-4 flex-wrap">
+
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="urgency">
+              <label class="form-check-label">
+                <span class="dot low"></span> Low
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="urgency">
+              <label class="form-check-label">
+                <span class="dot medium"></span> Medium
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="urgency">
+              <label class="form-check-label">
+                <span class="dot high"></span> High
+              </label>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Button -->
+        <div class="text-center">
+          <a href="complain.html"><button type="submit" class="btn submit-btn text-white">
+            Submit Complaint
+          </button></a>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- My Complaints Table -->
+  <div class="card table-card">
+
+    <div class="card-body">
+
+      <div class="d-flex justify-content-between align-items-center flex-wrap mb-3">
+        <h5 class="mb-2 mb-md-0">My Complaints</h5>
+        <small class="text-muted">
+          Status: All | Category: All
+        </small>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table align-middle">
+          <thead class="table-light">
+            <tr>
+              <th>ID</th>
+              <th>Complaints</th>
+              <th>Location</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>503</td>
+              <td>Wi-Fi Not Working</td>
+              <td>📍 2nd Floor</td>
+              <td><span class="status-badge pending">Pending</span></td>
+              <td>⋯</td>
+            </tr>
+
+            <tr>
+              <td>504</td>
+              <td>Leaky Pipe</td>
+              <td>📍 City Park</td>
+              <td><span class="status-badge resolved">Resolved</span></td>
+              <td>⋯</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+</body>
+</html>
